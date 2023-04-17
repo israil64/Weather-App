@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/OIP.jpeg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <!-- tailwind  -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Weather App</title>
+    </head>
+
+
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <h2>weather app</h2>
+                <div class="tab-container">
+                    <p class="tab" data-userWeather>your weather</p>
+                    <p class="tab" data-searchWeather>search Weather</p>
+                </div>
+                <div class="weather-container">
+                    <!-- grant location container  -->
+                    <div class="sub-container grant-location-conatiner" class="">
+                        <img src="./img/location.png" alt="" width="80px" height="80px" loading="lazy">
+                        <p>grant location access</p>
+                        <p>allows acces to get weather information</p>
+                        <button class="btn" data-grandtAccess> grand Access</button>
+                    </div>
+                    <!-- search form  -->
+                    <form action="" class="form-container" data-searchForm>
+                        <input placeholder="search for City ..." data-searchInput>
+                        <button class="btn" type="submit">
+                            <img src="./img/search.png" alt="searchicon" height="20px" width="20px">
+                        </button>
+                    </form>
+
+                    <!-- loading screen container  -->
+                    <div class="sub-container loading-container">
+                        <img src="./img/loading.gif" alt="" height="150" width="150">
+                        <p>loading...</p>
+                    </div>
+                    <!-- API error -->
+                    <!-- API error -->
+                    <div class="sub-container api-error-container">
+                        <img src="./img/404.jpg" data-notFoundImg alt="" />
+                        <p data-apiErrorText></p>
+                        <button class="btn" data-apiErrorBtn>Retry</button>
+                    </div>
+
+
+                    <!-- show weather info 0000 -->
+                    <div class="user-info-container ">
+
+                        <div class="name mt-2 ">
+                            <p data-cityName class="text-[30px] uppercase font-mono"></p>
+                            <img data-countryIcon alt="" class="w-[30px] h-[30px] ">
+                        </div>
+                        <!-- weather description  -->
+                        <p data-weatherDesc class="text-center text-[20px] font-mono uppercase"></p>
+                        <!-- weather icon  -->
+                        <img data-weatherIcon alt="" class="w[30px]">
+                        <!-- weather temprature  -->
+                        <p data-temp class="text-center text-[40px] font-mono uppercase"></p>
+
+                        <!-- 3 cards container wheather information  -->
+                        <div class="parameter-conatainer">
+                            <!-- card1 -->
+                            <div class="parameter">
+                                <img src="./img/wind.png" alt="">
+                                <p>windSpeed</p>
+                                <p data-windSpeed></p>
+                            </div>
+                            <!-- card2 -->
+                            <div class="parameter">
+                                <img src="./img/humidity.png" alt="">
+                                <p>huminitys</p>
+                                <p data-huminity></p>
+                            </div>
+                            <!-- card3 -->
+                            <div class="parameter">
+                                <img src="./img/cloud.png" alt="">
+                                <p>clounds</p>
+                                <p data-clound></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
